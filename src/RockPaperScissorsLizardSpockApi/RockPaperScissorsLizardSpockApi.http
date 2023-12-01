@@ -1,0 +1,19 @@
+@RockPaperScissorsLizardSpockApi_HostAddress = https://localhost:7294
+
+GET {{RockPaperScissorsLizardSpockApi_HostAddress}}/choices
+Accept: application/json
+
+###
+GET {{RockPaperScissorsLizardSpockApi_HostAddress}}/choice
+Accept: application/json
+
+###
+POST {{RockPaperScissorsLizardSpockApi_HostAddress}}/play
+Accept: application/json
+Content-Type: application/json
+
+{
+  "player": 1
+}
+
+###
