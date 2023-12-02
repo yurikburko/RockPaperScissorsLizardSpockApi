@@ -32,15 +32,13 @@ builder.Services.AddHttpClient<IRandomNumberGenerator, RandomNumberGenerator>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
 
-    var option = new RewriteOptions();
-    option.AddRedirect("^$", "swagger");
-    app.UseRewriter(option);
-}
+app.UseSwagger();
+app.UseSwaggerUI();
+
+var option = new RewriteOptions();
+option.AddRedirect("^$", "swagger");
+app.UseRewriter(option);
 
 app.UseHttpsRedirection();
 
