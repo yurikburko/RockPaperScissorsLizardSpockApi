@@ -42,7 +42,7 @@ if (app.Environment.IsDevelopment())
     app.UseRewriter(option);
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
