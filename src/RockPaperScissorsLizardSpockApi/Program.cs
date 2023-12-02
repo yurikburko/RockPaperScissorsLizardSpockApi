@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Rewrite;
 using RockPaperScissorsLizardSpockApi.Models;
 using RockPaperScissorsLizardSpockApi.Services;
 using System.Reflection;
@@ -35,6 +36,10 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+
+    var option = new RewriteOptions();
+    option.AddRedirect("^$", "swagger");
+    app.UseRewriter(option);
 }
 
 app.UseHttpsRedirection();

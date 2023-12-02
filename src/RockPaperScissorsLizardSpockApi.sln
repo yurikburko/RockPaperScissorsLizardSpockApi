@@ -5,7 +5,9 @@ VisualStudioVersion = 17.9.34310.174
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RockPaperScissorsLizardSpockApi", "RockPaperScissorsLizardSpockApi\RockPaperScissorsLizardSpockApi.csproj", "{69CB4205-8D81-4A6E-9E70-2C9E7A100A5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockPaperScissorsLizardSpockApi.Tests", "RockPaperScissorsLizardSpockApi.Tests\RockPaperScissorsLizardSpockApi.Tests.csproj", "{4F2F3255-870F-401F-B42B-6A0E1ABD5577}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RockPaperScissorsLizardSpockApi.Tests", "RockPaperScissorsLizardSpockApi.Tests\RockPaperScissorsLizardSpockApi.Tests.csproj", "{4F2F3255-870F-401F-B42B-6A0E1ABD5577}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{52DCF9FD-0AE6-4498-90AD-C1216EB2552C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{4F2F3255-870F-401F-B42B-6A0E1ABD5577}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F2F3255-870F-401F-B42B-6A0E1ABD5577}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F2F3255-870F-401F-B42B-6A0E1ABD5577}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52DCF9FD-0AE6-4498-90AD-C1216EB2552C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52DCF9FD-0AE6-4498-90AD-C1216EB2552C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52DCF9FD-0AE6-4498-90AD-C1216EB2552C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52DCF9FD-0AE6-4498-90AD-C1216EB2552C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
