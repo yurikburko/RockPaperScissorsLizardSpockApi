@@ -1,5 +1,4 @@
-﻿using RockPaperScissorsLizardSpockApi.Controllers;
-using RockPaperScissorsLizardSpockApi.Models;
+﻿using RockPaperScissorsLizardSpockApi.Models;
 
 namespace RockPaperScissorsLizardSpockApi.Services
 {
@@ -19,6 +18,9 @@ namespace RockPaperScissorsLizardSpockApi.Services
         public async Task<int> GetRandomNumber()
         {
             var response = await _httpClient.GetAsync(_configuration["ExternalRandomGeneratorEndpoint"]);
+
+            response.EnsureSuccessStatusCode();
+
             var randomNumberModel = await response.Content.ReadFromJsonAsync<RandomNumberModel>();
             if (randomNumberModel == null)
             {

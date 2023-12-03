@@ -137,6 +137,7 @@ namespace RockPaperScissorsLizardSpockApi.Tests
             });
         }
 
+        [TestMethod]
         public async Task PlayRoundAgainstBot_should_throw_Exception_if_playerChoiceId_is_invalid()
         {
             var service = CreateService();
@@ -150,6 +151,6 @@ namespace RockPaperScissorsLizardSpockApi.Tests
         => new GameService(
                 choicesOptions ?? DefaultChoicesOptions,
                 randomNumberGenerator?.Object ?? Mock.Of<IRandomNumberGenerator>()
-            );
+            );        
     }
 }

@@ -27,7 +27,12 @@ builder.Services.AddSwaggerGen(options =>
 builder.Services.Configure<List<Choice>>(builder.Configuration.GetSection("choices"));
 
 builder.Services.AddSingleton<IGameService, GameService>();
-builder.Services.AddHttpClient<IRandomNumberGenerator, RandomNumberGenerator>();
+builder.Services.AddHttpClient<IRandomNumberGenerator, RandomNumberGenerator>().AddStandardResilienceHandler(options =>
+{
+    options.AttemptTimeout.Timeout = TimeSpan.FromSeconds(5);
+    options.Retry.MaxRetryAttempts = 7;
+    options.Retry.Delay = TimeSpan.FromMilliseconds(100);
+});
 
 var app = builder.Build();
 
