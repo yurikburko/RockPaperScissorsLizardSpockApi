@@ -9,11 +9,17 @@ on:
   pull_request:
     branches: [ "main" ]
 
+defaults:
+  run:    
+    working-directory: src/RockPaperScissorsLizardSpockApi.Tests
+    
 jobs:
   build-and-test:
 
     runs-on: ubuntu-latest
-
+    defaults:
+      run:      
+        working-directory: src/RockPaperScissorsLizardSpockApi.Tests
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
@@ -21,11 +27,8 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet restore
-      working-directory: src/RockPaperScissorsLizardSpockApi.Tests
+      run: dotnet restore     
     - name: Build
-      run: dotnet build --no-restore
-      working-directory: src/RockPaperScissorsLizardSpockApi.Tests
+      run: dotnet build --no-restore     
     - name: Test
-      run: dotnet test --no-build --verbosity normal
-      working-directory: src/RockPaperScissorsLizardSpockApi.Tests
+      run: dotnet test --no-build --verbosity normal  
