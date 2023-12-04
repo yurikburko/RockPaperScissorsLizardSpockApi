@@ -16,3 +16,6 @@ You can also run the application by using the instructions located in its `Docke
 
 ## Testing API / online demo
 Deployed API application is available [here](https://rockpaperscissorslizardspockapi.onrender.com/)
+
+## Check workflow status:
+[![.NET](https://github.com/yurikburko/RockPaperScissorsLizardSpockApi/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/yurikburko/RockPaperScissorsLizardSpockApi/actions/workflows/build-and-test.yml)
